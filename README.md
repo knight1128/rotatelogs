@@ -10,10 +10,10 @@ When time changed from past to future, function of rotatelogs is well working.
 But, When time changed from future to past, rotatelogs is not working
 
 This is a example below.
-#] date
+\#] date
 2011. 02. 14. (mon) 17:04:31 KST
 
-#] ./rotatelogs aaa-%y%m%d 86400
+\#] ./rotatelogs aaa-%y%m%d 86400
 1
 2
 3
@@ -21,7 +21,7 @@ This is a example below.
 changed
 ^D
 
-#] ls -al aaa*
+\#] ls -al aaa*
 -rw-r--r--  1 root root 14 11/20 01:00 aaa-110214
    (I expected rotatelogs would rotate logs, but it is not splitted!!!!)
 
@@ -31,10 +31,10 @@ I patched and uploaded rotatlogs.c in http 2.2.13.
 
 After installing, I tested it.
 
-#] date
+\#] date
 2011. 02. 14. (mon) 17:10:31 KST
 
-#] ./rotatelogs aaa-%y%m%d 86400
+\#] ./rotatelogs aaa-%y%m%d 86400
 1
 2
 3
@@ -42,7 +42,7 @@ After installing, I tested it.
 changed
 ^D
 
-#] ls -al aaa*
+\#] ls -al aaa*
 -rw-r--r--  1 root root       8 11/20 01:00 aaa-071119
 -rw-r--r--  1 root root       6  2/14  2011 aaa-110214
   (This was what I wanted.)
